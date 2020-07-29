@@ -3,19 +3,24 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 
 const app = express();
-const host = '34.64.104.195';
+const host = '10.178.0.2';
+const port = 8001;
 
-app.set('port', process.env.PORT || 8001);
 app.set('view engine', 'pug');
 
-app.use(helmet);
+let connect = 0;
+
+app.use(helmet());
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
-  console.log('hello jun. you will get standard skill of service develop.');
+	res.write("Hello jun. we will get standard skill of service develop. \n");
+	res.write(`your connect sequence: ${connect}`);
+	connect++;
+	res.end();
 });
 
-app.listen(app.get('port'), host, () => {
+app.listen(port, host, () => {
   console.log(`Server running on http://${host}:${port}`);
 });
 
