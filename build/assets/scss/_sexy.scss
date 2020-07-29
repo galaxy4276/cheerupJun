@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Jua&display=swap');
+@import './variables';
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $galaxy_gray;
+  font-family: 'Gugi';
+  color: white;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 90vh;
+  h1 {
+    font-size: 72px;
+    margin-bottom: 15px;
+  }
+  
+  .announce_box {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $galaxy_box_gray;
+    padding: 50px 50px;
+    line-height: 1.9;
+    font-family: 'Jua';
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
