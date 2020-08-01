@@ -19,7 +19,7 @@ const LOGIN_FACEBOOK = '/login/passport-facebook';
 const LOGIN_GOOGLE = '/login/passport-google'
 
 
-export const urls = {
+const urls = {
   welcomePage: WELCOME_PAGE,
   
   home: HOME,
@@ -34,3 +34,4 @@ export const urls = {
 };
 
 
+export default urls;
