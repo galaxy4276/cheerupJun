@@ -1,8 +1,9 @@
-import express, { urlencoded } from 'express';
+import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import path from 'path';
 import router from './routes/testRouter';
+import { sharePug } from './middlewares/middlewares';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+app.use(sharePug);
 
 app.use('/', router);
 
