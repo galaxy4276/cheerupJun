@@ -67,6 +67,8 @@ body {
     margin-bottom: 15px; }
   .wrapper .announce_box {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-color: #39444e;
     padding: 50px 50px;
@@ -75,11 +77,21 @@ body {
     font-weight: 400;
     font-size: 20px; }
 
+.sign-up {
+  position: relative;
+  line-height: 1.9;
+  padding: 4px;
+  border: solid 1px;
+  border-radius: 10px;
+  height: 350px; }
+
 .sign-up .social-sign-up {
   display: block;
   background: white;
-  margin: 12px 0 0 0;
-  padding: 3px;
+  width: 200px;
+  height: 35px;
+  margin: 14px 0 0 0;
+  padding: 5px;
   border-radius: 10px;
   color: rgba(0, 0, 0, 0.8);
   font-size: 19px;
@@ -98,6 +110,21 @@ body {
 .sign-up .social-sign-up:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
+
+.manual-sign-up {
+  height: 50px; }
+
+.manual-sign-up * {
+  display: block; }
+
+.manual-sign-up-form .input-form * {
+  padding: 0;
+  margin: 0 0 10px;
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 400; }
 
 .hr-sect {
   display: flex;
