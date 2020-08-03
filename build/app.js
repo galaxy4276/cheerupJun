@@ -4,9 +4,13 @@ import helmet from 'helmet';
 import path from 'path';
 import router from './routes/testRouter';
 const app = express();
+<<<<<<< HEAD
+const host = '10.178.0.2';
+=======
 
 
 const host = '10.173.0.2';
+>>>>>>> origin/backend
 const port = 8001;
 
 app.set('view engine', 'pug');
