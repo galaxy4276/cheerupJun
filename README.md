@@ -10,7 +10,7 @@
 * views/template/login.pug 를 추가 (scss 수정)
 * main.pug > index.pug로 변경(testcontrollers 경로 수정)
 
-## 200823 backend
+## 200804 backend
 * mariadb, Sequelize 모듈 추가 설치했습니다. ( npm i 설치 필요 )
 * db 설정값은 config/config.json에 포함되어 있습니다.
 * model/index.js 에서 db에 관한 환경설정이 작성되어있습니다.

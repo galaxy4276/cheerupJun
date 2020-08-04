@@ -40,7 +40,7 @@ body {
 
 }
 
-// views/template/login.pug 의 sighUp의 css. 임시로 이 파일에 위치
+// views/template/join.pug 의 sighUp의 css. 임시로 이 파일에 위치
 .sign-up{
   padding: 4px;
   border: solid 1px;
@@ -95,7 +95,7 @@ body {
   font-size: 12px;
   font-weight: 400;
 
-// views/template/login.pug 의 hr 선의 css. 임시로 이 파일에 위치
+// views/template/join.pug 의 hr 선의 css. 임시로 이 파일에 위치
 .hr-sect { 
   display: flex;
   flex-basis: 100%;
@@ -115,9 +115,10 @@ body {
   margin: 0px 16px;
 }
 
-// views/template/login.pug 의 ageLimit 클래스. 임시로 이 파일에 위치
+// views/template/join.pug 의 ageLimit 클래스. 임시로 이 파일에 위치
 .age-limit {
   font-size: 12px;
   font-weight : 100;
   color : rgba(255, 255, 255, 0.4);
+}
 }
