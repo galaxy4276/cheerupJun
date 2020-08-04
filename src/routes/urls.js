@@ -1,8 +1,9 @@
 // 홈페이지
 const WELCOME_PAGE = '/';
 
-const HOME = '/main';
+const HOME = '/';
 // const USER_COMMUNITY = '/main/community';
+const TEST = '/test';
 
 
 // User Page
@@ -14,12 +15,15 @@ const LOGIN = '/login';
 const LOGOUT = '/logout';
 const JOIN = '/join';
 
-const LOGIN_NAVER = '/login/passport-naver';
-const LOGIN_FACEBOOK = '/login/passport-facebook';
-const LOGIN_GOOGLE = '/login/passport-google'
+const LOGIN_NAVER = '/passport-naver';
+const NAVER_CALLBACK = '/callback/naver';
+const LOGIN_FACEBOOK = '/passport-facebook';
+const LOGIN_GOOGLE = '/passport-google'
 
 
 const urls = {
+  test: TEST,
+
   welcomePage: WELCOME_PAGE,
   
   home: HOME,
@@ -29,6 +33,7 @@ const urls = {
   join: JOIN,
 
   loginNaver: LOGIN_NAVER,
+  naverCallback: NAVER_CALLBACK,
   loginFacebook: LOGIN_FACEBOOK,
   loginGoogle: LOGIN_GOOGLE,
 };

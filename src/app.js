@@ -1,18 +1,23 @@
+/* eslint-disable no-undef */
 // Import Server Modules
 import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import path from 'path';
 import cookie from 'cookie-parser';
+import passport from 'passport';
+import './controllers/passports';
 // import session from 'express-session';
 
 
 // Import Database(Mariadb) Modules
-import { verifyConnectingMariaDB } from './middlewares/middlewares';
+import { verifyConnectingMariaDB, sharePug } from './middlewares/middlewares';
 
 
 // Import Router 
 import router from './routes/testRouter';
+import globalRouter from './routes/globalRouter';
+import urls from './routes/urls';
 
 
 // 사용자 지정 환경변수를 사용할 수 있게 불러옵니다.
@@ -39,12 +44,15 @@ app.use(cookie(process.env.COOKIE_SECRET));
 //   saveUninitialized: false,
 //   secret: process.env.COOKIE_SECRET,
 // }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(sharePug);
 
 
-app.use('/', router);
+app.use(urls.test, router); // 프론트 개발자 전용 test 라우터입니다. http://localhost/test 접근이 가능합니다.
+app.use(urls.home, globalRouter);
 
 
 app.listen(app.get('port'), () => {
   console.log(`서버가 ${app.get('port')}에서 실행중입니다!`);
 });
-

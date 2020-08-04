@@ -1,18 +1,18 @@
 ul.sign-up
     li
-        a(href="#none").social-sign-up
+        a(href=`${urls.login}${urls.loginNaver}`).social-sign-up
             span.logo-img-naver
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/naver_main.png", "alt" : "네이버 로고", "width": "20px", "height": "20px"})
             span.social-text.
                 네이버로 회원가입
     li
-        a(href="#none").social-sign-up
+        a(href=`${urls.login}/${urls.loginFacebook}`).social-sign-up
             span.logo-img-facebook
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/fb_main.png", "alt" : "페이스북 로고", "width": "20px", "height": "20px"})
             span.social-text.
                 페이스북으로 회원가입
     li
-        a(href="#none").social-sign-up
+        a(href=`${urls.login}/${urls.loginGoogle}`).social-sign-up
             span.logo-img-google
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/google_main.png", "alt" : "구글 로고", "width": "20px", "height": "20px"})
             span.social-text.

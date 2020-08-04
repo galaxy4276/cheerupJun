@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 const path = require('path');
@@ -15,7 +16,11 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 });
 
 
+db.User = require('./User')(sequelize, Sequelize);
+
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
 
 module.exports = db;
