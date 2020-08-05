@@ -123,24 +123,27 @@ body {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 400; }
-  .manual-join-form .input-form * .hr-sect {
-    display: flex;
-    flex-basis: 100%;
-    align-items: center;
-    color: white;
-    font-size: 12px;
-    margin: 8px 0px; }
-  .manual-join-form .input-form * .hr-sect::before,
-  .manual-join-form .input-form * .hr-sect::after {
-    content: "";
-    flex-grow: 1;
-    background: white;
-    height: 1px;
-    font-size: 0px;
-    line-height: 0px;
-    margin: 0px 16px; }
-  .manual-join-form .input-form * .age-limit {
-    font-size: 12px;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.4); }
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin: 8px 0px; }
+
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: white;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 16px; }
+
+.age-limit {
+  font-size: 12px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.4); }
 
