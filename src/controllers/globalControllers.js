@@ -29,7 +29,7 @@ export const callbackNaver = async (accessToken, refreshToken, profile, done) =>
   //       return done(null, user);
   // });
   try {
-    const userSearch = await User.findOne({ where: { userId: profile.id }});
+    let userSearch = await User.findOne({ where: { userId: profile.id }});
 
     if (userSearch === 'undefined') {
       await User.create({
@@ -40,10 +40,12 @@ export const callbackNaver = async (accessToken, refreshToken, profile, done) =>
         userEmail: profile.emails[0],
       });
       userSearch = await User.findOne({ where: { userId: profile.id }});
+
       console.log(`userSearch: ${userSearch}`);
     }
 
     done(null, userSearch);
+    
   } catch (err) {
     console.log('네이버 로그인에 문제가 생겼습니다.');
     console.error(err);

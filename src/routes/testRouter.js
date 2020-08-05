@@ -7,7 +7,7 @@ import urls from './urls';
 const router = express.Router();
 
 
-router.get(urls.join, renderIndex);
+router.get(urls.home, () => { console.log('로그인 실패'); }, renderIndex);
 
 
 export default router;
