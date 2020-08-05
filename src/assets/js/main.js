@@ -1,5 +1,5 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
-(() => {
-  console.log('Devenv for JunJae Kim.');
-});
+() => {
+  console.log("Devenv for JunJae Kim.");
+};
