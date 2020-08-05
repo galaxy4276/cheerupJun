@@ -3,7 +3,7 @@ import { User } from "../models";
 
 export const renderIndex = (req, res) => {
   console.log('유저 출력' + req.user);
-  res.render('index', { title: '섹시준재닷컴' });
+  res.render('index', { title: '섹시은기닷컴' });
 };
 
 

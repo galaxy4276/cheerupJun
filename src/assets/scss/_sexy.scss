@@ -41,15 +41,13 @@ body {
 }
 
 // views/template/join.pug 의 sighUp의 css. 임시로 이 파일에 위치
-.sign-up{
-  position: relative;
-  line-height: 1.9;
+.join{
   padding: 4px;
   border: solid 1px;
   border-radius: 10px;
   height: 350px;
 }
-.sign-up .social-sign-up{
+.join .social-join{
   display: block;
   background: white;
   width: 200px;
@@ -75,20 +73,20 @@ body {
     justify-content: center;
   }
 }
-.sign-up .social-sign-up:hover {
+.join .social-join:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.manual-sign-up{
+.manual-join{
   height: 50px;
 }
 
-.manual-sign-up *{
+.manual-join *{
   display: block;
 }
 
-.manual-sign-up-form .input-form *{
+.manual-join-form .input-form *{
   padding: 0;
   margin: 0 0 10px;
   width: 200px;
@@ -96,7 +94,7 @@ body {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 400;
-
+}
 // views/template/join.pug 의 hr 선의 css. 임시로 이 파일에 위치
 .hr-sect { 
   display: flex;
@@ -122,5 +120,4 @@ body {
   font-size: 12px;
   font-weight : 100;
   color : rgba(255, 255, 255, 0.4);
-}
 }

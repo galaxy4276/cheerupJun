@@ -1,32 +1,32 @@
-ul.sign-up
+ul.join
     li
-        a(href=`${urls.login}${urls.loginNaver}`).social-sign-up
+        a(href=`${urls.login}${urls.loginNaver}`).social-join
             span.logo-img-naver
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/naver_main.png", "alt" : "네이버 로고", "width": "20px", "height": "20px"})
             span.social-text.
                 네이버로 회원가입
     li
-        a(href=`${urls.login}/${urls.loginFacebook}`).social-sign-up
+        a(href=`${urls.login}/${urls.loginFacebook}`).social-join
             span.logo-img-facebook
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/fb_main.png", "alt" : "페이스북 로고", "width": "20px", "height": "20px"})
             span.social-text.
                 페이스북으로 회원가입
     li
-        a(href=`${urls.login}/${urls.loginGoogle}`).social-sign-up
+        a(href=`${urls.login}/${urls.loginGoogle}`).social-join
             span.logo-img-google
                 img&attributes({"src": "http://i.evasion.co.kr/data/image/sign_up/google_main.png", "alt" : "구글 로고", "width": "20px", "height": "20px"})
             span.social-text.
                 구글로 회원가입
-    .sign-up-division
+    .join-division
         .hr-sect.
             또는
-    .manual-sign-up
-        form(method="post" action="#none").manual-sign-up-form
+    .manual-join
+        form(method="post" action="#none").manual-join-form
             ul.input-form
                 li
-                    input(type="email" name="signUpEmail" value placeholder="이메일 주소 입력").sign-up-email
+                    input(type="email" name="joinEmail" value placeholder="이메일 주소 입력").join-email
                 li
-                    input(type="submit" name value="회원가입").sign-up-btn
+                    input(type="submit" name value="회원가입").join-btn
             .age-limit
                 p.
                     * 만 19세 이상 가입 가능

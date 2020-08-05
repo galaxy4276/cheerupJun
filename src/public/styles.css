@@ -77,15 +77,13 @@ body {
     font-weight: 400;
     font-size: 20px; }
 
-.sign-up {
-  position: relative;
-  line-height: 1.9;
+.join {
   padding: 4px;
   border: solid 1px;
   border-radius: 10px;
   height: 350px; }
 
-.sign-up .social-sign-up {
+.join .social-join {
   display: block;
   background: white;
   width: 200px;
@@ -97,27 +95,27 @@ body {
   font-size: 19px;
   text-decoration: none;
   transition: 0.15s; }
-  .sign-up .social-sign-up :nth-child(1) {
+  .join .social-join :nth-child(1) {
     width: 12%;
     margin-right: 3px; }
-  .sign-up .social-sign-up .logo-img-naver {
+  .join .social-join .logo-img-naver {
     background-color: #2DB400; }
-  .sign-up .social-sign-up .logo-img-facebook {
+  .join .social-join .logo-img-facebook {
     background-color: #3b5998; }
-  .sign-up .social-sign-up :nth-child(2) {
+  .join .social-join :nth-child(2) {
     justify-content: center; }
 
-.sign-up .social-sign-up:hover {
+.join .social-join:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
 
-.manual-sign-up {
+.manual-join {
   height: 50px; }
 
-.manual-sign-up * {
+.manual-join * {
   display: block; }
 
-.manual-sign-up-form .input-form * {
+.manual-join-form .input-form * {
   padding: 0;
   margin: 0 0 10px;
   width: 200px;
@@ -125,24 +123,27 @@ body {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 400; }
-  .manual-sign-up-form .input-form * .hr-sect {
-    display: flex;
-    flex-basis: 100%;
-    align-items: center;
-    color: white;
-    font-size: 12px;
-    margin: 8px 0px; }
-  .manual-sign-up-form .input-form * .hr-sect::before,
-  .manual-sign-up-form .input-form * .hr-sect::after {
-    content: "";
-    flex-grow: 1;
-    background: white;
-    height: 1px;
-    font-size: 0px;
-    line-height: 0px;
-    margin: 0px 16px; }
-  .manual-sign-up-form .input-form * .age-limit {
-    font-size: 12px;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.4); }
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin: 8px 0px; }
+
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: white;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 16px; }
+
+.age-limit {
+  font-size: 12px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.4); }
 
