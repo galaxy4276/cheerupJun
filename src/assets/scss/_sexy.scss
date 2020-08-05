@@ -27,8 +27,9 @@ body {
   
   .announce_box {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-
     background-color: $galaxy_box_gray;
     padding: 50px 50px;
     line-height: 1.9;
@@ -36,4 +37,90 @@ body {
     font-weight: 400;
     font-size: 20px;
   }
+
+}
+
+// views/template/join.pug 의 sighUp의 css. 임시로 이 파일에 위치
+.sign-up{
+  position: relative;
+  line-height: 1.9;
+  padding: 4px;
+  border: solid 1px;
+  border-radius: 10px;
+  height: 350px;
+}
+.sign-up .social-sign-up{
+  display: block;
+  background: white;
+  width: 200px;
+  height: 35px;
+  margin: 14px 0 0 0;
+  padding: 5px;
+  border-radius: 10px;
+  color:rgba(0, 0, 0, 0.8);
+  font-size: 19px;
+  text-decoration:none;
+  transition: 0.15s;
+  :nth-child(1){
+    width:12%;
+    margin-right:3px;
+  }
+  .logo-img-naver{
+    background-color: #2DB400;
+  }
+  .logo-img-facebook{
+    background-color: #3b5998;
+  }
+  :nth-child(2){
+    justify-content: center;
+  }
+}
+.sign-up .social-sign-up:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.manual-sign-up{
+  height: 50px;
+}
+
+.manual-sign-up *{
+  display: block;
+}
+
+.manual-sign-up-form .input-form *{
+  padding: 0;
+  margin: 0 0 10px;
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 400;
+
+// views/template/join.pug 의 hr 선의 css. 임시로 이 파일에 위치
+.hr-sect { 
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: white;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 16px;
+}
+
+// views/template/join.pug 의 ageLimit 클래스. 임시로 이 파일에 위치
+.age-limit {
+  font-size: 12px;
+  font-weight : 100;
+  color : rgba(255, 255, 255, 0.4);
+}
 }

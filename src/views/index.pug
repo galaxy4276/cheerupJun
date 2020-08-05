@@ -1,0 +1,10 @@
+extends template/layout.pug
+block title
+  title= title
+block stylesheet
+  link(rel="stylesheet", href="/styles.css")
+block content
+  .wrapper
+    h1 테스트 페이지
+    .announce_box
+      include ./template/join.pug

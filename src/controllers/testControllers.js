@@ -1,4 +1,3 @@
 export const testRouing = (req, res) => {
-  res.render('main', {});
+  res.render('index', {});
 };
-
