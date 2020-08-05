@@ -121,3 +121,47 @@ body {
   font-weight : 100;
   color : rgba(255, 255, 255, 0.4);
 }
+
+.serverMsg1 {
+  width: 100%;
+  font-family: 'Jua';
+  display: flex;
+  justify-content: center;
+}
+
+.userList {
+  margin-top: 10px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 3px;
+  
+    border-bottom: 1px solid white;
+  
+    &:hover {
+      color: rgba(233, 233, 233, 0.8);
+  
+      border-bottom: 1px solid rgba(233, 233, 233, 0.8);
+    }
+  }
+}
+
+.join_form {
+  background-color: $galaxy_box_gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  .userbox {
+    padding: 50px 50px;
+    color: black;
+    line-height: 1.5;
+    background-color: orange;
+    margin: 50px;
+  }
+}

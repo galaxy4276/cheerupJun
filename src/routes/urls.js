@@ -4,6 +4,8 @@ const WELCOME_PAGE = '/';
 const HOME = '/';
 // const USER_COMMUNITY = '/main/community';
 const TEST = '/test';
+const TEST_LOGIN_FAILED  = '/loginFailed';
+const TEST_USER_LIST = '/userList';
 
 
 // User Page
@@ -23,6 +25,8 @@ const LOGIN_GOOGLE = '/passport-google'
 
 const urls = {
   test: TEST,
+  loginFailed: TEST_LOGIN_FAILED,
+  userList: TEST_USER_LIST,
 
   welcomePage: WELCOME_PAGE,
   

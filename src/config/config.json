@@ -6,6 +6,7 @@
     "host": "34.64.104.195",
     "dialect": "mariadb",
     "operatorsAliases": 0,
+    "timezone": "Etc/GMT0",
     "dialectOptions": {
       "collate": "utf8mb4_general_ci",
       "useUTC": 0

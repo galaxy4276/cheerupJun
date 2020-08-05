@@ -1,0 +1,16 @@
+extends ../template/layout.pug
+block title
+  title= title
+block stylesheet
+  link(rel="stylesheet", href="/styles.css")
+block content
+  .wrapper
+    .join_form
+      h3 회원가입자 명단
+      each user in list
+        .userbox
+          p 사용자 아이디: #{user.userId}
+          p 사용자 이름: #{user.userName}
+          p 사용자 이메일: #{user.userEmail}
+          p 사용자 생성일: #{user.createdAt}
+          p 사용자 갱신일: #{user.updatedAt}

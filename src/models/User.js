@@ -1,21 +1,25 @@
+/* eslint-disable no-undef */
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('userTBL', {
     userId: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(100),
       primaryKey: true,
     },
     userPassword: {
       type: DataTypes.STRING(15),
+      allowNull: true,
     },
     userName: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(25),
+      allowNull: true,
     },
     userAge: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     userEmail: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(50),
+      allowNull: true,
     },
   }, {
     timestamp: true,

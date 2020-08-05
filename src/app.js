@@ -6,8 +6,8 @@ import helmet from 'helmet';
 import path from 'path';
 import cookie from 'cookie-parser';
 import passport from 'passport';
-import passportConfig from './controllers/passports';
-import session from 'express-session';
+import passportConfig from './controllers/passport';
+import session from 'express-session'; 
 
 
 // Import Database(Mariadb) Modules
@@ -56,4 +56,4 @@ app.use(urls.home, globalRouter);
 
 app.listen(app.get('port'), () => {
   console.log(`서버가 ${app.get('port')}에서 실행중입니다!`);
-});
+}); 
