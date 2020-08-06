@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const path = require("path");
 const ExtractCSS = require("mini-css-extract-plugin");
 const FileLoader = require('file-loader');
