@@ -114,13 +114,13 @@ body {
   margin-right: 3px;
 }
 .join .social-join .logo-img-naver {
-  content: url(./src/public/logo_naver.png?54e1def683e5692086cb348aa0dd160a);
+  content: url(/img/logo_naver.png);
 }
 .join .social-join .logo-img-facebook {
-  content: url(./src/public/logo_facebook.png?b9f4bb8a8439aaefd35393039bb81401);
+  content: url(/img/logo_facebook.png);
 }
 .join .social-join .logo-img-kakao {
-  content: url(./src/public/logo_kakaotalk.png?4118c19af1ad61f4fd2eff073653793b);
+  content: url(/img/logo_kakaotalk.png);
 }
 .join .social-join :nth-child(2) {
   justify-content: center;

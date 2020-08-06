@@ -1,9 +1,11 @@
 const path = require("path");
 const ExtractCSS = require("mini-css-extract-plugin");
+const FileLoader = require('file-loader');
 
 const MODE = "development";
 const ENTRY_FILE = path.resolve(__dirname, "src", "assets", "js", "main.js");
 const OUTPUT_DIR = path.resolve(__dirname, "src", "public");
+const IMG_OUTPUT_DIR = path.resolve(__dirname, "src", "public", "img");
 
 module.exports = {
   entry: ENTRY_FILE,
@@ -14,41 +16,50 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.s[ac]ss$/i,
+        {
+          test: /\.s[ac]ss$/i,  
+          use: [
+            {
+              loader: ExtractCSS.loader,
+            },
+            "css-loader",
+            "sass-loader",
+          ],
+        },
+        {
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: ExtractCSS.loader,
+            loader: 'file-loader',
+            query: {
+              name: '[name].[ext]',
+              outputPath: '/img',
+            },
           },
-          "css-loader",
-          "sass-loader",
         ],
-      },
-      {
-        // Çü½ÄÀÌ png,jpgÀÎ ÆÄÀÏÀ» ÆÄÀÏ¸í µÚ¿¡ ÇØ½¬ ¸íÀ» ºÙ¿©  publicPath¿¡ ·Îµå½ÃÅµ´Ï´Ù.
-        test: /\.(png|jpg)$/,
-        loader: "file-loader",
-        options: {
-          publicPath: "OUTPUT_DIR",
-          name: "[name].[ext]?[hash]",
-        },
-      },
-      {
-        test: /\.(png|jpg)$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            publicPath: "OUTPUT_DIR",
-            name: "[name].[ext]?[hash]",
-            limit: 5000, // 5kb ¹Ì¸¸ ÆÄÀÏ¸¸ data url·Î Ã³¸®. 5kb ÀÌ»óÀÌ¸é fallback µÇ¾î fallback ±âº»°ªÀÎ file-loader·Î Ã³¸®ÇÕ´Ï´Ù.
-          },
-        },
-      },
-    ],
-  },
+        }
+      ],
+    },
   plugins: [
     new ExtractCSS({
       filename: "styles.css",
     }),
   ],
 };
+
+
+
+
+
+// {
+  //   test: /\.(png|jpg)$/,
+  //   use: {
+    //     loader: "url-loader",
+//     options: {
+  //       publicPath: "OUTPUT_DIR",
+  //       name: "[name].[ext]?[hash]",
+  //       limit: 5000, // 5kb ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ data urlï¿½ï¿½ Ã³ï¿½ï¿½. 5kb ï¿½Ì»ï¿½ï¿½Ì¸ï¿½ fallback ï¿½Ç¾ï¿½ fallback ï¿½âº»ï¿½ï¿½ï¿½ï¿½ file-loaderï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+  //     },
+  //   },
+  // },
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ png,jpgï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ú¿ï¿½ ï¿½Ø½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½  publicPathï¿½ï¿½ ï¿½Îµï¿½ï¿½Åµï¿½Ï´ï¿½.
