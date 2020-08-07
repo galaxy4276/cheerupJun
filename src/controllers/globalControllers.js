@@ -1,4 +1,3 @@
-import passport from "passport";
 import { User } from "../models";
 import urls from "../routes/urls";
 import { v4 as uuidv4 } from 'uuid';
@@ -9,51 +8,6 @@ export const renderIndex = (req, res) => {
 };
 
 
-export const loginNaver = passport.authenticate('naver');
-
-
-export const callbackNaver = async (accessToken, refreshToken, profile, done) => {
-  // await User.findOne({ where: { userId: profile.id } }
-  //   , (err, user) => {
-  //     if (!user) {
-  //       const newUser = User.create({
-  //         userId: profile.id,
-  //         userPassword: null,
-  //         userName: profile.displayName,
-  //         userAge: profile.age,
-  //         userEmail: profile.emails[0],
-  //       });
-  //     }
-  //       if (err) {
-  //         console.error(err);
-  //         done(err, null);
-  //       }
-  //       return done(null, user);
-  // });
-  try {
-    let userSearch = await User.findOne({ where: { userId: profile.id }});
-
-    if (userSearch === 'undefined') {
-      await User.create({
-        userId: profile.id,
-        userPassword: null,
-        userName: profile.displayName,
-        userAge: profile.profile.age,
-        userEmail: profile.emails[0],
-      });
-      userSearch = await User.findOne({ where: { userId: profile.id }});
-
-      console.log(`userSearch: ${userSearch}`);
-    }
-
-    done(null, userSearch);
-
-  } catch (err) {
-    console.log('네이버 로그인에 문제가 생겼습니다.');
-    console.error(err);
-    done(err, null);
-    } 
-  };
 
 
 export const postJoin = async (req, res) => {
@@ -78,7 +32,6 @@ export const postJoin = async (req, res) => {
       });
     } else {
       console.log('이미 유저가 존재하거나 이메일이 존재하지 않습니다.');
-      console.log(searchUser);
     }
 
     res.redirect(urls.home);

@@ -17,6 +17,7 @@ import { verifyConnectingMariaDB, sharePug } from './middlewares/middlewares';
 // Import Router 
 import router from './routes/testRouter';
 import globalRouter from './routes/globalRouter';
+import authRouter from './routes/authRouter';
 import urls from './routes/urls';
 
 
@@ -50,8 +51,9 @@ passportConfig();
 app.use(sharePug);
 
 
-app.use(urls.test, router); // 프론트 개발자 전용 test 라우터입니다. http://localhost/test 접근이 가능합니다.
 app.use(urls.home, globalRouter);
+app.use(urls.login, authRouter);
+app.use(urls.test, router); // 프론트 개발자 전용 test 라우터입니다. http://localhost/test 접근이 가능합니다.
 
 
 app.listen(app.get('port'), () => {
