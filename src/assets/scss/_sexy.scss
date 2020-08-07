@@ -54,13 +54,11 @@ body {
   margin: 14px 0 0 0;
   padding: 5px;
   border-radius: 10px;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 19px;
-  text-decoration: none;
   transition: 0.15s;
+  text-decoration: none;
   :nth-child(1) {
     width: 12%;
-    margin-right: 3px;
+    margin: 5px 7px 0px 3px;
   }
   .logo-img-naver {
     content: url(../img/logo/logo_naver.png);
@@ -73,7 +71,8 @@ body {
     content: url(../img/logo/logo_kakaotalk.png);
   }
   :nth-child(2) {
-    justify-content: center;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 19px;
   }
 }
 .join .social-join:hover {
