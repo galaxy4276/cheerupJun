@@ -7,7 +7,6 @@ const FileLoader = require('file-loader');
 const MODE = "development";
 const ENTRY_FILE = path.resolve(__dirname, "src", "assets", "js", "main.js");
 const OUTPUT_DIR = path.resolve(__dirname, "src", "public");
-const IMG_OUTPUT_DIR = path.resolve(__dirname, "src", "public", "img");
 
 module.exports = {
   entry: ENTRY_FILE,
