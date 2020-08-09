@@ -56,19 +56,17 @@ table {
 }
 
 .userList {
-  margin-top: 10px;
+  margin: 10px 0 0 30px;
+  transition: 0.2s;
 }
-
+.userList:hover {
+    cursor: pointer;
+    transform: translateX(4px);
+}
 .userList a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding-bottom: 3px;
-
-    border-bottom: 1px solid white;
-}
-.userList a :hover {
-    color: rgba(233, 233, 233, 0.8);
-    border-bottom: 1px solid rgba(233, 233, 233, 0.8);
 }
 
 
