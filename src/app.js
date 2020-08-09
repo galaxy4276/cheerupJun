@@ -56,6 +56,21 @@ app.use(urls.login, authRouter);
 app.use(urls.test, router); // 프론트 개발자 전용 test 라우터입니다. http://localhost/test 접근이 가능합니다.
 
 
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  console.log('에러가 발생했습니다.');
+  console.error(err);
+
+  res.status(500).send('에러 발생');
+  next(err);
+});
+
+
 app.listen(app.get('port'), () => {
   console.log(`서버가 ${app.get('port')}에서 실행중입니다!`);
 }); 
