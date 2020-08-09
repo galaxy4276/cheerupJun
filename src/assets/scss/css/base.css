@@ -3,6 +3,12 @@
 html {
     font-family: 'Noto Sans KR', sans-serif;
 }
+input[type=submit] {
+    padding:5px 15px; 
+    background:rgb(230, 237, 242); 
+    border:0 none;
+    cursor:pointer;
+}
 
 /* development */
 main {
