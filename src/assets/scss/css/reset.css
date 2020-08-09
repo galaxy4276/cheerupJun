@@ -20,12 +20,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-<<<<<<< HEAD:src/assets/scss/css/reset.css
 	font-style: inherit;
-=======
->>>>>>> temp:src/assets/scss/_reset.scss
 	vertical-align: baseline;
-    text-decoration: none;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

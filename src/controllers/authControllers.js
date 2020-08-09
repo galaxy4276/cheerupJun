@@ -1,5 +1,5 @@
 import passport from 'passport';
-import { User } from '../models';
+import sequelize from '../models';
 
 
 export const loginNaver = passport.authenticate('naver');
@@ -23,6 +23,8 @@ export const callbackNaver = async (accessToken, refreshToken, profile, done) =>
   //       }
   //       return done(null, user);
   // });
+  const { User } = sequelize;
+
   try {
     let userSearch = await User.findOne({ where: { userId: profile.id }});
 

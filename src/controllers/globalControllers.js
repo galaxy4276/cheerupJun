@@ -1,4 +1,4 @@
-import { User } from "../models";
+import sequelize from "../models";
 import urls from "../routes/urls";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -12,6 +12,7 @@ export const renderIndex = (req, res) => {
 
 export const postJoin = async (req, res) => {
   const { joinEmail } = req.body;
+  const { User } = sequelize;
   
   try {
     const searchUser = await User.findOne({ where: { userEmail: joinEmail }});
@@ -44,9 +45,13 @@ export const postJoin = async (req, res) => {
 
 
 export const userList = async (req, res) => {
-  const list = await User.findAll({});
+  const { User } = sequelize;
 
-  console.log(list);
-
-  res.render('backend/userList', { title: '회원가입 리스트', list });
+  try {
+    const list = await User.findAll({});
+    console.log(list);
+    res.render('backend/userList', { title: '회원가입 리스트', list });
+  } catch (err) {
+    console.error(err);
+  }
 }
