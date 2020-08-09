@@ -1,0 +1,41 @@
+
+.serverMsg1 {
+  width: 100%;
+  font-family: "Jua";
+  display: flex;
+  justify-content: center;
+}
+
+.userList {
+  margin:10px 0 20px 70px;
+}
+
+.userList a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+.userList a :hover {
+    color: rgba(233, 233, 233, 0.8);
+    border-bottom: 1px solid rgba(233, 233, 233, 0.8);
+}
+
+
+.join_form {
+  background-color: rgb(57, 68, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.join_form h3 {
+margin-top: 20px;
+}
+
+.join_form .userbox {
+padding: 50px 50px;
+color: black;
+line-height: 1.5;
+background-color: orange;
+margin: 50px;
+}
