@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-module.exports = (sequelize, DataTypes) => {
+const User = (sequelize, DataTypes) => {
   return sequelize.define('userTBL', {
     userId: {
       type: DataTypes.STRING(100),
@@ -25,3 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     timestamp: true,
   });
 };
+
+
+export default User;
