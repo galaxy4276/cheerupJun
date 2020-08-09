@@ -1,5 +1,5 @@
 import urls from '../routes/urls';
-import { sequelize } from '../models';
+import sequelize from '../models';
 
 
 export const sharePug = (req, res, next) => {
@@ -9,7 +9,9 @@ export const sharePug = (req, res, next) => {
 
 
 export const verifyConnectingMariaDB = async () => {
-  sequelize.sync()
+  const mariadb = sequelize.sequelize;
+
+  mariadb.sync()
     .then(() => {
       console.log('MariaDB 연결 성공했습니다.');
     })

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Gugi&family=Jua&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap);
 /* http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain)
@@ -21,8 +21,13 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+<<<<<<< HEAD
 	font-style: inherit;
 	vertical-align: baseline;
+=======
+	vertical-align: baseline;
+    text-decoration: none;
+>>>>>>> temp
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -47,18 +52,24 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+<<<<<<< HEAD
 html {
   height: 100%;
+=======
+
+.serverMsg1 {
+>>>>>>> temp
   width: 100%;
+  font-family: "Jua";
+  display: flex;
+  justify-content: center;
 }
 
-body {
-  background-color: #708090;
-  font-family: "Gugi";
-  color: white;
-  font-weight: 400;
+.userList {
+  margin:10px 0 20px 70px;
 }
 
+<<<<<<< HEAD
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -124,11 +135,42 @@ font-size: 19px;
 .join .social-join:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+=======
+.userList a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+.userList a :hover {
+    color: rgba(233, 233, 233, 0.8);
+    border-bottom: 1px solid rgba(233, 233, 233, 0.8);
 }
 
-.manual-join {
-  height: 50px;
+
+.join_form {
+  background-color: rgb(57, 68, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.join_form h3 {
+margin-top: 20px;
+}
+
+.join_form .userbox {
+padding: 50px 50px;
+color: black;
+line-height: 1.5;
+background-color: orange;
+margin: 50px;
+>>>>>>> temp
+}
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+<<<<<<< HEAD
 .manual-join * {
   display: block;
 }
@@ -143,39 +185,122 @@ font-size: 19px;
 }
 
 /* views/template/join.pug 의 hr 선의 css. 임시로 이 파일에 위치 */
+=======
+input[type=submit] {
+    padding:5px 15px; 
+    background:rgb(230, 237, 242); 
+    border:0 none;
+    cursor:pointer;
+}
+
+/* development */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    padding-top: 10px;
+    background-color: rgb(0, 38, 70);
+    border: 1px solid rgb(230, 237, 242);
+    border-radius: 10px;
+}
+.social-join {
+    display: flex;
+    background: rgb(242, 246, 248);
+    width: 190px;
+    height: 35px;
+    margin: 14px 0 0 0;
+    padding: 5px;
+    border: 0.5px solid rgb(230, 237, 242);
+    border-radius: 10px;
+    transition: 0.15s;
+}
+.social-join:hover,
+.join-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(0, 24, 44);
+}
+.social-join :nth-child(1) {
+    width: 12%;
+    margin: 5px 7px 5px 3px;
+}
+.social-join > .logo-img-naver {
+    content: url(/img/logo_naver.png);
+}
+.social-join > .logo-img-facebook {
+    content: url(/img/logo_facebook.png);
+}
+.social-join > .logo-img-kakao {
+    content: url(/img/logo_kakaotalk.png);
+}
+.social-text {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.join-division {
+    content: url(/img/join-division.PNG);
+    padding: 5px;
+}
+/*
+>>>>>>> temp
 .hr-sect {
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
-  color: white;
-  font-size: 12px;
-  margin: 8px 0px;
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    margin: 8px 0px;
 }
 .hr-sect::before,
 .hr-sect::after {
-  content: "";
-  flex-grow: 1;
-  background: white;
-  height: 1px;
-  font-size: 0px;
-  line-height: 0px;
-  margin: 0px 16px;
+    content: "";
+    flex-grow: 1;
+    background: white;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 16px;
 }
+*/
 
+<<<<<<< HEAD
 /* views/template/join.pug 의 ageLimit 클래스. 임시로 이 파일에 위치 */
 .age-limit {
   font-size: 12px;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.4);
 }
+=======
+>>>>>>> temp
 
-.serverMsg1 {
-  width: 100%;
-  font-family: "Jua";
-  display: flex;
-  justify-content: center;
+.manual-join {
+    height: 50px;
+}
+.manual-join-form .email-form * {
+    padding: 0;
+    margin: 0 0 10px;
+    width: 190px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: 0.15s;
+    text-decoration: none;
 }
 
+<<<<<<< HEAD
 .userList {
   margin-top: 10px;
 }
@@ -212,3 +337,14 @@ margin: 50px;
 }
 
 
+=======
+.age-limit {
+    font-size: 12px;
+    font-weight: 100;
+    color: white;
+}
+.age-limit * {
+    margin-top: 4px;
+}
+
+>>>>>>> temp

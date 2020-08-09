@@ -2,7 +2,7 @@ ul.join
     li
         a(href=`${urls.login}${urls.loginNaver}`).social-join
             span.logo-img-naver
-                img&attributes(src="http://localhost:8001/logo_naver.png")
+                img&attributes({"src": "none", "alt" : "네이버 로고", "width": "20px", "height": "20px"})
             p.social-text.
                 네이버로 회원가입
     li
@@ -18,11 +18,10 @@ ul.join
             p.social-text.
                 카카오로 회원가입
     .join-division
-        .hr-sect.
-            또는
+        img&attributes({"src":"none"})
     .manual-join
         form(method="post" action=urls.join).manual-join-form
-            ul.input-form
+            ul.email-form
                 li
                     input(type="email" name="joinEmail" value placeholder="이메일 주소 입력").join-email
                 li
@@ -32,5 +31,6 @@ ul.join
                     * 만 19세 이상 가입 가능
                 p.
                     * 어마무시한 내용
-span.userList
-  a(href=urls.test + urls.userList) 회원가입된 유저 확인하기
+div.userList
+    a(href=urls.test + urls.userList).
+        → 회원가입된 유저 확인하기
