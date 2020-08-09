@@ -1,26 +1,23 @@
-/* eslint-disable no-undef */
-'use strict';
+import Sequelize from 'sequelize';
+import { development } from './config';
 
-const path = require('path');
-const Sequelize = require('sequelize');
-const env = process.env.NODE_ENV || 'development';
-const config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
+// 데이터 모델
+import User from './User';
+
+
+const config = development; // 디비 환경설정
 const db = {};
 
 
-const sequelize = new Sequelize(config.database, config.username, config.password, config, {
-  dialectOptions: {
-    useUTC: false,
-  },
-  timezone: 'Etc/GMT0',
-});
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 
-db.User = require('./User')(sequelize, Sequelize);
+db.User = User(sequelize, Sequelize);
 
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 
-module.exports = db;
+// module.exports = db;
+export default db;
