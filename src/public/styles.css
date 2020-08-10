@@ -106,6 +106,20 @@ main {
     align-items: center;
 }
 
+.index-section {
+    width: 100vw;
+    border: 1px solid black;
+}
+
+#first-section {
+    height: 760px;
+    background-color: rgba(0,0,255,0.4);
+}
+#join-box {
+}
+#second-section {
+    height: 570px;
+}
 .join {
     display:flex;
     align-items: center;
@@ -231,6 +245,7 @@ footer{
     color: white;
 }
 main{
+    width: 100vw;
     margin: var( --header-height ) 0 var( --footer-height ) 0;
 }
 

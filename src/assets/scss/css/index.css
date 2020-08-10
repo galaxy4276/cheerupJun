@@ -1,0 +1,14 @@
+.index-section {
+    width: 100vw;
+    border: 1px solid black;
+}
+
+#first-section {
+    height: 760px;
+    background-color: rgba(0,0,255,0.4);
+}
+#join-box {
+}
+#second-section {
+    height: 570px;
+}

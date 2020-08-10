@@ -25,5 +25,6 @@ footer{
     color: white;
 }
 main{
+    width: 100vw;
     margin: var( --header-height ) 0 var( --footer-height ) 0;
 }
