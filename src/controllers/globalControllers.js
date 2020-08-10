@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const renderIndex = (req, res) => {
   console.log('유저 출력' + req.user);
-  res.render('index', { title: '섹시은기닷컴' });
+  res.render('index', { title: 'Hotel Service' });
 };
 
 
