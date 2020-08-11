@@ -1,0 +1,68 @@
+html{
+    width: 100vw;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main section{
+    min-height: 760px;
+    border: 1px solid black;
+}
+
+.first-section{
+    background-color: rgba(0, 60, 119, 0.1);
+    position: relative;
+}
+.join-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.second-section{
+    background-color: rgba(0, 60, 119, 0.25);
+}
+.third-section{
+    background-color: rgba(0, 60, 119, 0.40);
+}
+.fourth-section{
+    background-color: rgba(0, 60, 119, 0.55);
+}
+.fifth-section{
+    background-color: rgba(0, 60, 119, 0.70);
+}
+.sixth-section{
+    background-color: rgba(0, 60, 119, 0.85);
+}
+
+
+/*개발에 필요한 임시 css*/
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+body *{
+    text-decoration: none;
+    color: black;
+}
+
+.join-box > div{
+    border: 3px dotted black;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 160px 30px 160px 30px;
+}
+
+.index-banner{
+    display: flex;
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
