@@ -91,3 +91,11 @@
   - 임시 레이아웃의 가시성을 높였습니다.
 ### 진행중
   - 메인페이지인 index.html 틀 작업 중입니다.
+
+
+## 200811 frontend
+### 변경사항
+  -  테스트 코드 추가, 변경
+    > 테스트 전용 폴더 views/temp 를 만들고 기존 views/backend와 새로 생성한 views/ frontend 를 배치
+    > views/backend 의 경로 변경사항을 controllers/ 의 globalControllers.js 와 testControllers.js 에 적용시킴(코드수정)"
+  

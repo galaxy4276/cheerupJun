@@ -50,7 +50,7 @@ export const userList = async (req, res) => {
   try {
     const list = await User.findAll({});
     console.log(list);
-    res.render('backend/userList', { title: '회원가입 리스트', list });
+    res.render('temp/backend/userList', { title: '회원가입 리스트', list });
   } catch (err) {
     console.error(err);
   }
