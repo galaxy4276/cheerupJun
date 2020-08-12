@@ -5,7 +5,7 @@ import sequelize from '../models';
 export const loginNaver = passport.authenticate('naver');
 
 
-export const callbackNaver = async (accessToken, refreshToken, profile, done) => {
+export const callbackNaver = async (______, _____, profile, done) => {
   // await User.findOne({ where: { userId: profile.id } }
   //   , (err, user) => {
   //     if (!user) {
