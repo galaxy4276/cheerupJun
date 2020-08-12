@@ -106,6 +106,20 @@ main {
     align-items: center;
 }
 
+.index-section {
+    width: 100vw;
+    border: 1px solid black;
+}
+
+#first-section {
+    height: 760px;
+    background-color: rgba(0,0,255,0.4);
+}
+#join-box {
+}
+#second-section {
+    height: 570px;
+}
 .join {
     display:flex;
     align-items: center;
@@ -203,5 +217,35 @@ main {
 }
 .age-limit * {
     margin-top: 4px;
+}
+body{
+    --header-height: 2vw;
+    --footer-height: 2vw;
+}
+
+header, footer {
+    width: 100vw;
+    font-weight: bold;
+    text-align: center;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: var( --header-height );
+    background-color: rgb(242, 246, 248);
+    color: black;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: var( --footer-height );
+    background-color: rgb(0, 24, 44);
+    color: white;
+}
+main{
+    width: 100vw;
+    margin: var( --header-height ) 0 var( --footer-height ) 0;
 }
 

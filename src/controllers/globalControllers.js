@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const renderIndex = (req, res) => {
   console.log('유저 출력' + req.user);
-  res.render('index', { title: '섹시은기닷컴' });
+  res.render('index', { title: 'Hotel Service' });
 };
 
 
@@ -50,7 +50,7 @@ export const userList = async (req, res) => {
   try {
     const list = await User.findAll({});
     console.log(list);
-    res.render('backend/userList', { title: '회원가입 리스트', list });
+    res.render('temp/backend/userList', { title: '회원가입 리스트', list });
   } catch (err) {
     console.error(err);
   }

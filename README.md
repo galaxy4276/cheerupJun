@@ -82,3 +82,25 @@
   - scss 사용 보류로 assets/scss 의 구성을 css 개발 환경으로 바꾸었습니다.
 ### 버그 또는 이슈 해결
   - 위 과정 중 로그인 폼의 스타일시트가 무너져 긴급 수정하였습니다.
+
+
+## 200811 frontend
+### 변경사항
+  - 브라우저 상단 탭에 표시되는 shortcut icon을 추가하고 타이틀을 변경하였습니다.
+    => 미들웨어쪽 타이틀 변경 기능 삭제해주세요!
+  - 임시 레이아웃의 가시성을 높였습니다.
+### 진행중
+  - 메인페이지인 index.html 틀 작업 중입니다.
+
+
+## 200811 frontend
+### 변경사항
+  -  테스트 코드 추가, 변경
+    > 테스트 전용 폴더 views/temp 를 만들고 기존 views/backend와 새로 생성한 views/ frontend 를 배치
+    > views/backend 의 경로 변경사항을 controllers/ 의 globalControllers.js 와 testControllers.js 에 적용시킴(코드수정)"
+
+## 200812 frontend
+  - index.pug 레이아웃 설계를 위한 테스트 문서 작성 중
+
+## 200813 frontend
+  - index.pug 레이아웃 설계를 위한 테스트 문서 작성 중

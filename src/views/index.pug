@@ -1,10 +1,18 @@
-extends template/layout.pug
-block title
-  title= title
-block stylesheet
-  link(rel="stylesheet", href="/styles.css")
-block content
-  include ./template/join.pug
-block script
-  script(src="https://kit.fontawesome.com/2b0731bdab.js" crossorigin="anonymous")
-  
+doctype html
+html(lang="ko")
+  head
+    link(rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://cdn2.iconfinder.com/data/icons/health-and-medical-28/64/94-512.png")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Hotel Service - Welcome!
+    link(rel="stylesheet", href="/styles.css")
+  body
+    section.index-section#first-section
+      article#join-box
+        include template/join.pug
+    section.index-section#second-section
+    section.index-section#third-section
+    section.index-section#fourth-section
+    section.index-section#fifth-section
+    section.index-section#sixth-section
+    section.index-section#sixth-section
