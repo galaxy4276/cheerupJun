@@ -1,6 +1,6 @@
 body{
-    --index-header-height: 4vw;
-    --index-footer-height: 10vw;
+    --index-header-height: 80px;
+    --index-footer-height: 180px;
 }
 
 .index-header, .index-footer {
@@ -11,7 +11,7 @@ body{
     left: 0;
     top: 0;
     height: var( --index-header-height );
-    background-color: rgb(242, 246, 248, 0);
+    background-color: rgba(43, 167, 230, 0.2);
     color: black;
 }
 .index-header > .main-logo {
@@ -26,6 +26,7 @@ body{
     top: 50%;
     padding: 1px;
     border-bottom: 0.5px solid black;
+    cursor: pointer;
 }
 .index-footer{
     height: var( --index-footer-height );
@@ -43,6 +44,5 @@ body *{
     text-decoration: none;
     color: black;
 }
-
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/

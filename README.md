@@ -98,4 +98,9 @@
   -  테스트 코드 추가, 변경
     > 테스트 전용 폴더 views/temp 를 만들고 기존 views/backend와 새로 생성한 views/ frontend 를 배치
     > views/backend 의 경로 변경사항을 controllers/ 의 globalControllers.js 와 testControllers.js 에 적용시킴(코드수정)"
-  
+
+## 200812 frontend
+  - index.pug 레이아웃 설계를 위한 테스트 문서 작성 중
+
+## 200813 frontend
+  - index.pug 레이아웃 설계를 위한 테스트 문서 작성 중
